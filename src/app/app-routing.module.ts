@@ -26,11 +26,17 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
 import {NavComponent} from "./components/nav/nav.component";
+import {HomeComponent} from "./components/home/home.component";
 
 const routes: Routes = [
     {
         path: '',
-        component: NavComponent
+        component: NavComponent, children: [
+            {
+                path: 'home',
+                component: HomeComponent
+            }
+        ]
     }
 ];
 
