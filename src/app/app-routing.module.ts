@@ -27,6 +27,7 @@ import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
 import {NavComponent} from "./components/nav/nav.component";
 import {HomeComponent} from "./components/home/home.component";
+import {TecnicoListComponent} from "./components/tecnico/tecnico-list/tecnico-list.component";
 
 const routes: Routes = [
     {
@@ -35,6 +36,10 @@ const routes: Routes = [
             {
                 path: 'home',
                 component: HomeComponent
+            },
+            {
+                path: 'tecnicos',
+                component: TecnicoListComponent
             }
         ]
     }
