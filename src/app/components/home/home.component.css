@@ -1,10 +1,16 @@
 .card {
     width: 90%;
-    margin: auto;
+    margin: 1rem auto;
     background-color: rgb(235, 235, 235);
 }
 
 img {
-    height: 20rem;
-
+    height: 15rem;
+}
+span {
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(37,97,207,1) 50%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
