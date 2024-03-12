@@ -22,10 +22,12 @@ export class TecnicoUpdateComponent implements OnInit {
     "dataCriacao": "",
   }
 
+  perfilChecked: { [key: string]: boolean } = { ADMIN: false, CLIENTE: false, TECNICO: false };
+
   perfilMapping = {
-    'ADMIN': 0,
-    'CLIENTE': 1,
-    'TECNICO': 2
+    'ADMIN': 1,
+    'CLIENTE': 2,
+    'TECNICO': 3
   };
 
   nome: FormControl = new FormControl(null, Validators.minLength(3));
@@ -50,8 +52,8 @@ export class TecnicoUpdateComponent implements OnInit {
       this.tecnico = resposta
       this.tecnico.perfils.forEach((perfil, index) => {
         this.tecnico.perfils[index] = this.perfilMapping[perfil];
+        this.perfilChecked[perfil] = true;
       });
-      this.tecnico.perfils = [];
 
     }, ex =>{
 
@@ -59,6 +61,7 @@ export class TecnicoUpdateComponent implements OnInit {
       this.toastr.error("Tecnico nao encontrado", "ERRO");
 
     })
+    console.log(this.tecnico)
   }
 
   validaCampos(): boolean {
