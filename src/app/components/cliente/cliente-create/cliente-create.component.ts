@@ -42,10 +42,6 @@ export class ClienteCreateComponent implements OnInit {
       return
     }
 
-    console.log("importante")
-    console.log(this.cliente)
-    console.log("importante")
-
     this.service.create(this.cliente).subscribe(resposta => {
       this.toastr.success('Cliente cadastrado com sucesso', 'Cadastro');
       this.router.navigate(['clientes'])
