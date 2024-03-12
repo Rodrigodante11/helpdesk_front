@@ -56,12 +56,9 @@ export class TecnicoUpdateComponent implements OnInit {
       });
 
     }, ex =>{
-
-
       this.toastr.error("Tecnico nao encontrado", "ERRO");
-
     })
-    console.log(this.tecnico)
+
   }
 
   validaCampos(): boolean {
